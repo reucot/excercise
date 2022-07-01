@@ -50,3 +50,36 @@ INSERT INTO pilot_hobbies
     "home_lib": true, "trips":0
     }'::jsonb
     );
+
+SELECT count(*)
+FROM pilot_hobbies
+WHERE hobbies ? 'sports'
+
+--Вопросы по главе
+CREATE TABLE test_numeric
+(
+    measurement numeric(5,2),
+    description text
+);
+
+INSERT INTO test_numeric
+    VALUES 
+    (999.9999, 'Какое-то измерение');
+ 
+ INSERT INTO test_numeric
+    VALUES 
+    (999.9009, 'Какое-то измерение');
+
+INSERT INTO test_numeric
+    VALUES 
+    (999.1111, 'Какое-то измерение');
+
+INSERT INTO test_numeric
+    VALUES 
+    (998.9999, 'Какое-то измерение');
+
+--36
+
+UPDATE pilot_hobbies
+SET hobbies = hobbies || '{ "cars":["Honda"]}'
+WHERE pilot_name = 'Boris'

@@ -35,3 +35,4 @@ VALUES
     ('SU9', '10B', 'Economy'),
     ('SU9', '10F', 'Economy'),
     ('SU9', '20F', 'Economy');
+
